@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+	</head>
+    <body>
+        <nav>
+            <ol class="menu">
+                <li>Navegación 1</li>
+                <li>Navegación 2</li>
+                <li>Navegación 3</li>
+                <li>Navegación 4</li>
+            </ol>
+        </nav>
+		<h1>Formularios</h1>
+		<h2>html5 power</h2>
+
+        <p>Lorem ipsum dolor sit amet, hola mundo vestrum appellas fortunae civitatem auri in fuerat est se ad quia ad te in deinde cupis hominem armatis exanimem scientiam pervenisset afferte Apollonius ut sua etiam esse in fuerat accidens quam aniculae morsque nutricem rex</p>
+    	 
+
+		<!-- ejemplo de formulario para html5 -->
+		  <!-- en la medida de lo posible usar access key (
+		  para gente con problemas de vison , para acceder a ese placeholder
+		  se usa alt+key) -->
+        <form method="post" action="ok.html">
+            <label for="txtCampoObligatorio" accesskey="o">Obligatorio:</label>
+            <input id="txtCampoObligatorio" name="campoObligatorio"
+            	   type="text" required  >
+            <br/>
+		<!-- con esto deberia forzar la paracion de @ y de .com -->
+            Email:
+            <input type="email" name="activar"
+                   value="Activar poli")/>
+            <br/>
+			<!-- deberia forzar el teclado numerico, en caso de salir , crear teclado virtual -->
+            Teléfono:
+            <input type="tel" pattern="^\d{3}[- ]\d{5}$" 
+			       placeholder="555-55555"/>
+            <br/>
+			
+            Número:
+            <input type="number" min="0" max="9" step="1" />
+            <br/>
+			<!-- es un medidor , en caso de que el telfono no 
+				reconozca este bloque pilla el 50 sobre 100	-->
+            Meter:
+			<meter min="0" max="100" low="10" high="90"
+                   optimum="50" value="50">50 sobre 100</meter>
+            <br/>
+            Progress:
+            <progress max="100" value="50">Cargando...</progress>
+            <br/>
+        	   
+            Search:
+            <input type="search"  />
+        	   
+            <input type="submit" name="aceptar"
+            	   value="Aceptar" />
+        	   <!-- con el formnovalidate evita la valiidacion -->
+            <input type="submit" name="cancelar"
+            	   value="cancelar" formnovalidate />
+        	   
+            <input type="button" name="checkCorreo"
+            	   value="Comprobar Correo"
+                   />
+        	   
+        </form>
+    	   
+        <script src="http://code.jquery.com/jquery-1.11.0.js">	    	    
+        </script>
+		<script src= "04_forms\modernizr.js"></script>
+		<script src= "04_forms\polyfiller.js"></script>
+		<script>
+			<!-- iniciliza el webshims para los forms -->
+			webshims.polyfill();
+		</script>
+    </body>
+</html>
+

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<nav>
+		<ul>
+			<li><p id="nv"> nv1</p></li>
+			<li><p id="nv2"> nv2</p></li>
+		</ul>
+		</nav>
+		<main>
+			<p id= 'tx'> </p>
+		</main>
+		
+		<script>
+					
+			var textito ={
+				texto1: 'hola que ase',
+				texto2: 'lo peto',
+				texto3: 'wololo'
+			};
+			//var p = document.querySelector('#tx');
+			
+			var nv= document.querySelector('#nv');
+			//var nv= document.querySelector('nv2');
+			
+			
+			var wr= function(textito){		
+					for(x in textito){
+					pr = document.createTextNode(textito[x]);
+					tx= document.getElementById('tx');
+					tx.appendChild(pr);
+				}
+			};	
+			
+			nv.addEventListener('click',function(evt){
+				wr(textito);
+			},true);
+			//p.addEventListener('click', function(evt){document.write('hola que tal')},true);
+		</script>
+	</body>
+</html>

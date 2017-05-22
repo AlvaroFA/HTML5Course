@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Demo webservices</title>
+	</head>
+	<body>
+			<form>
+				<button>boton</button>
+			</form>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script>		
+				var obtenerTareasServidor = function(){
+						var url = 'http://localhost/tareas.json';
+						var deferred = $.getJSON(url);					
+						deferred.done(function(tareas){
+						});
+						deferred.done(function(tareas){
+						});
+						/*en caso de fallo*/
+						deferred.fail(function(tareas){
+							console.log("Fallo")});
+						/*en caso de que todo vaya bien*/
+						deferred.always(function(tareas){
+						});			
+						return deferred.promise();
+				};
+				var init = function(){
+					$('button').click(function(evt){
+						var promise=obtenerTareasServidor();
+							promise.done(function(tareas){
+							alert(JSON.stringify(tareas));
+						});
+						evt.preventDefault();
+					});
+					
+					$(document).ajaxStart(function(){
+						window.alert('starting');
+					});
+					
+					$(document).ajaxComplete(function(){
+						window.alert('closing');
+					});
+				};
+				$(document).ready(function(evt){
+					init();
+				});		
+		</script>
+	</body>
+</html>

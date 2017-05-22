@@ -1,0 +1,20 @@
+body{
+	background-color: black;
+	color: white;
+}
+
+li:nth-child(2){
+	color:red;
+}
+li:nth-child(3){
+	color:yellow;
+}
+li:nth-child(4){
+	color:blue;
+}
+li:nth-child(5){
+	color:pink;
+}
+h1{
+	color: brown;
+}

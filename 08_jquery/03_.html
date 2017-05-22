@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>	
+		<h1>demo</h1>
+		<p>texto original</p>
+		<form>
+			<button>push</button>
+		</form>	
+		
+		<script>
+			var act = function(){
+				$('p').fadeOut('300' , function(){
+					$('p').text('texto cambiado');
+				});	
+				$('p').fadeIn('300', function(){
+					
+					$('p').text('texto original');
+				});				
+		// inicializando 
+			};
+			
+			var init = function(){
+				$('button').click(function(evt){
+						act();
+						evt.preventDefault();
+				});
+			};
+		//proceso de carga (solo el DOM)
+			$(document).ready(function(){			
+				init();
+			});
+		</script>
+	</body>
+</html>

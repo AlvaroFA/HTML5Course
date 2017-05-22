@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>demo</h1>	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script>
+	//creacion de un h2 segun metodo domç	
+	var h = document.createElement('h2');
+		h.innerHTML = "hjfklsdhfsdkljfsl";
+			document.querySelector('body').appendChild(h);
+		
+		$('<h2>')
+			.text('jquery')
+			.appendTo('body');
+			
+		$('p')
+			.each(function(idx, pElem){
+				console.log('trololo %i',
+					idx , $(pElem).text().length);
+			});
+	</script>
+</body>
+</html>
